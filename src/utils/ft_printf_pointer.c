@@ -6,7 +6,7 @@
 /*   By: fsayuri- <fsayuri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 10:47:35 by fsayuri-          #+#    #+#             */
-/*   Updated: 2026/06/05 14:31:25 by fsayuri-         ###   ########.fr       */
+/*   Updated: 2026/06/05 15:36:40 by fsayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ static int	ft_puthex_long(unsigned long num)
 
 int	ft_printf_pointer(va_list args)
 {
-	unsigned long ptr;
-	int	count;
+	unsigned long	ptr;
+	int				count;
 
 	ptr = va_arg(args, unsigned long);
 	count = 0;

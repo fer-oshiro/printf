@@ -12,26 +12,28 @@
 
 #include "ft_printf.h"
 
-static int	ft_hex(unsigned int	num)
+static int	ft_hex(unsigned int num, int is_upper)
 {
 	char	*base;
 	int		count;
-	
+
 	base = "0123456789abcdef";
+	if (is_upper)
+		base = "0123456789ABCDEF";
 	count = 0;
 	if (num >= 16)
-		count += ft_hex(num / 16);
+		count += ft_hex(num / 16, is_upper);
 	ft_putchar_fd(base[num % 16], 1);
 	count++;
 	return (count);
 }
 
-int	ft_printf_hex(va_list args)
+int	ft_printf_hex(va_list args, int is_upper)
 {
-	char	*base;
-	int		count;
+	char			*base;
+	int				count;
 	unsigned int	num;
 
 	num = va_arg(args, unsigned int);
-	return (ft_hex(num));
+	return (ft_hex(num, is_upper));
 }

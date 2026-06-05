@@ -6,7 +6,7 @@
 /*   By: fsayuri- <fsayuri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 11:14:26 by fsayuri-          #+#    #+#             */
-/*   Updated: 2026/06/05 15:39:20 by fsayuri-         ###   ########.fr       */
+/*   Updated: 2026/06/05 16:21:44 by fsayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int	ft_printf(const char *format, ...)
 	{
 		if (format[i] == '%' && ft_strchr(flags, format[i + 1]))
 		{
-			res += ft_chose_format(format[i + 1], args);
 			i++;
+			res += ft_chose_format(format[i], args);
 		}
 		else
 		{

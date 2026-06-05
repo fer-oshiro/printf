@@ -30,8 +30,6 @@ static int	ft_hex(unsigned int num, int is_upper)
 
 int	ft_printf_hex(va_list args, int is_upper)
 {
-	char			*base;
-	int				count;
 	unsigned int	num;
 
 	num = va_arg(args, unsigned int);

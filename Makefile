@@ -5,6 +5,9 @@ SRCS = src/ft_printf.c \
 	src/utils/ft_printf_char.c \
 	src/utils/ft_printf_string.c \
 	src/utils/ft_printf_pointer.c \
+	src/utils/ft_printf_digit.c \
+	src/utils/ft_printf_unsigned_digit.c \
+	src/utils/ft_unsigned_putnbr.c \
 
 OBJS = $(SRCS:.c=.o)
 

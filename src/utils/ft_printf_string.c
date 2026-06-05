@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fsayuri- <fsayuri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/03 11:12:18 by fsayuri-          #+#    #+#             */
-/*   Updated: 2026/06/05 11:31:16 by fsayuri-         ###   ########.fr       */
+/*   Created: 2026/06/05 10:47:35 by fsayuri-          #+#    #+#             */
+/*   Updated: 2026/06/05 11:30:29 by fsayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-#include "libft.h"
-#include <stdarg.h>
-#include <stdio.h>
+int	ft_printf_string(va_list args)
+{
+	char	*word;
 
-int 	ft_printf(const char *, ...);
-int		ft_printf_char(va_list args);
-int		ft_printf_string(va_list args);
-int		ft_printf_pointer(va_list args);
-
-#endif
+	word = va_arg(args, char *);
+	if (!word)
+		word = "(null)";
+	ft_putstr_fd(word , 1);
+	return (ft_strlen(word));
+}

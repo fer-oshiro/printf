@@ -6,7 +6,7 @@
 /*   By: fsayuri- <fsayuri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 11:12:18 by fsayuri-          #+#    #+#             */
-/*   Updated: 2026/06/05 14:15:28 by fsayuri-         ###   ########.fr       */
+/*   Updated: 2026/06/05 14:52:55 by fsayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int		ft_printf_string(va_list args);
 int		ft_printf_pointer(va_list args);
 int		ft_printf_digit(va_list args);
 int		ft_printf_unsigned_digit(va_list args);
-
-int		ft_unsigned_putnbr(unsigned int n, int fd);
+int		ft_printf_hex(va_list args);
 
 #endif

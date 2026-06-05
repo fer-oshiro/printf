@@ -6,7 +6,7 @@
 /*   By: fsayuri- <fsayuri-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/03 11:14:26 by fsayuri-          #+#    #+#             */
-/*   Updated: 2026/06/05 14:07:16 by fsayuri-         ###   ########.fr       */
+/*   Updated: 2026/06/05 14:53:00 by fsayuri-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ int ft_printf(const char *format, ...)
 				res += ft_printf_digit(args);
 			else if (ft_strchr("u", format[i + 1]))
 				res += ft_printf_unsigned_digit(args);
+			else if (ft_strchr("x", format[i + 1]))
+				res += ft_printf_hex(args);
 			i++;
 		}
 		else
